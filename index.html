@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service &amp; Subscription Agreement — Digital Craft &amp; GamLEARN</title>
+  <meta name="description" content="Website &amp; CRM service and subscription agreement between Digital Craft and GamLEARN." />
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'Arboria';
+      src: url('fonts/1c7f14203d028f1c6f8914508f469cb9.woff2') format('woff2'),
+           url('fonts/1c7f14203d028f1c6f8914508f469cb9.woff') format('woff'),
+           url('fonts/1c7f14203d028f1c6f8914508f469cb9.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      /* GamLEARN design system tokens */
+      --gl-primary: #4B0082;
+      --gl-primary-dark: #38005F;
+      --gl-primary-accent: #6A1B9A;
+      --gl-primary-tint: #F0E6F7;
+      --gl-green: #00664D;
+      --gl-green-tint: #E0EFEA;
+
+      /* Document tones — refined, paper-like */
+      --ink: #1A1A1A;
+      --ink-soft: #2B3548;
+      --ink-muted: #5A6670;
+      --rule: #E5E8EE;
+      --rule-strong: #C8CFD4;
+      --paper: #FAFBFC;
+      --surface: #FFFFFF;
+
+      /* Status */
+      --success: #00664D;
+      --success-tint: #E0EFEA;
+      --warning: #C9851A;
+
+      --shadow-soft: 0 1px 2px rgba(26, 26, 26, 0.04), 0 8px 24px rgba(26, 26, 26, 0.06);
+      --shadow-lift: 0 4px 12px rgba(26, 26, 26, 0.08), 0 24px 48px rgba(75, 0, 130, 0.1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Arboria', 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'ss01', 'cv11';
+    }
+
+    /* ---------- Top brand strip ---------- */
+    .brand-strip {
+      background: var(--surface);
+      border-bottom: 1px solid var(--rule);
+      padding: 20px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(1.2);
+    }
+    .brand-strip-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      display: block;
+      width: auto;
+    }
+    .brand-logo-dc { height: 44px; }
+    .brand-logo-gl { height: 40px; }
+    .brand-x {
+      font-family: 'Fraunces', serif;
+      font-size: 18px;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+    @media (max-width: 640px) {
+      .brand-strip-inner { justify-content: center; }
+      .brand-logo-dc { height: 32px; }
+      .brand-logo-gl { height: 30px; }
+    }
+
+    /* ---------- Document container ---------- */
+    .doc {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 64px 32px 120px;
+    }
+
+    /* ---------- Header / cover ---------- */
+    .cover {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 64px 56px;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gl-primary-dark), var(--gl-primary), var(--gl-green));
+    }
+    .cover-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gl-primary);
+      margin-bottom: 24px;
+    }
+    .cover-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(34px, 5vw, 50px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    .cover-title em {
+      font-style: italic;
+      color: var(--gl-primary);
+    }
+    .cover-subtitle {
+      font-size: 17px;
+      color: var(--ink-soft);
+      max-width: 58ch;
+      line-height: 1.55;
+    }
+
+    .cover-parties {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 32px;
+      align-items: center;
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid var(--rule);
+    }
+    .party h3 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 10px;
+    }
+    .party .name {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .party .meta {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+    .between {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: var(--ink-muted);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 13px;
+    }
+    .meta-row > div {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .meta-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .meta-value {
+      font-size: 14px;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---------- Section blocks ---------- */
+    section.clause {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 48px 56px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+    section.clause h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 28px;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+    section.clause h2 .num {
+      font-family: 'Arboria', 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gl-primary);
+      letter-spacing: 0.08em;
+      font-variant-numeric: tabular-nums;
+    }
+    section.clause .lede {
+      font-size: 15px;
+      color: var(--ink-muted);
+      margin-bottom: 28px;
+      max-width: 64ch;
+    }
+    section.clause p {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      margin-bottom: 16px;
+      max-width: 72ch;
+    }
+    section.clause p:last-child { margin-bottom: 0; }
+    section.clause h3 {
+      font-family: 'Arboria', 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      letter-spacing: -0.005em;
+    }
+    section.clause ul, section.clause ol {
+      margin: 12px 0 16px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    section.clause ul li, section.clause ol li {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      padding-left: 28px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    section.clause ul li::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 12px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gl-primary);
+    }
+    section.clause ol { counter-reset: item; }
+    section.clause ol li { counter-increment: item; }
+    section.clause ol li::before {
+      content: counter(item);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gl-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---------- Money tables ---------- */
+    .ledger {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0 8px;
+      font-variant-numeric: tabular-nums;
+    }
+    .ledger thead th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding: 0 0 12px;
+      border-bottom: 1px solid var(--rule-strong);
+    }
+    .ledger thead th:last-child,
+    .ledger tbody td:last-child { text-align: right; }
+    .ledger tbody td {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 15px;
+      color: var(--ink);
+    }
+    .ledger tbody td .due {
+      font-size: 12px;
+      color: var(--ink-muted);
+      display: block;
+      margin-top: 2px;
+    }
+    .ledger tbody tr.total td {
+      border-bottom: none;
+      border-top: 2px solid var(--ink);
+      padding-top: 16px;
+      font-weight: 600;
+      font-family: 'Fraunces', serif;
+      font-size: 18px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: var(--gl-primary-tint);
+      color: var(--gl-primary);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-left: 8px;
+    }
+    .pill-green {
+      background: var(--gl-green-tint);
+      color: var(--gl-green);
+    }
+
+    /* Rate callout */
+    .rate-callout {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+    .rate-callout .badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--gl-primary-tint);
+      color: var(--gl-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .rate-callout .title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .rate-callout .desc {
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+    .rate-callout .price {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .rate-callout .price small {
+      display: block;
+      font-family: 'Arboria', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    /* ---------- Signature block ---------- */
+    .signature-section {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 48px 56px;
+      box-shadow: var(--shadow-lift);
+      position: relative;
+    }
+    .signature-section::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px; right: -1px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gl-primary-dark), var(--gl-primary), var(--gl-green));
+      border-radius: 4px 4px 0 0;
+    }
+    .signature-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gl-primary);
+      margin-bottom: 16px;
+    }
+    .signature-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 32px;
+      letter-spacing: -0.015em;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+    .signature-intro {
+      font-size: 15px;
+      color: var(--ink-muted);
+      max-width: 64ch;
+      margin-bottom: 32px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+    .form-field input {
+      height: 48px;
+      border: 1px solid var(--rule-strong);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--ink);
+      background: var(--surface);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .form-field input:focus {
+      outline: none;
+      border-color: var(--gl-primary);
+      box-shadow: 0 0 0 4px rgba(75, 0, 130, 0.12);
+    }
+    .form-field input.invalid {
+      border-color: #C0392B;
+      background: #F8E3E0;
+    }
+
+    /* Signature pad */
+    .sig-wrapper {
+      margin-bottom: 28px;
+    }
+    .sig-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sig-clear {
+      font-size: 12px;
+      color: var(--gl-primary);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 500;
+      padding: 0;
+    }
+    .sig-clear:hover { text-decoration: underline; }
+    .sig-pad-wrap {
+      position: relative;
+      border: 1px dashed var(--rule-strong);
+      border-radius: 8px;
+      background: var(--surface);
+      overflow: hidden;
+    }
+    .sig-pad-wrap.active { border-style: solid; border-color: var(--gl-primary); }
+    canvas#sigpad {
+      display: block;
+      width: 100%;
+      height: 180px;
+      cursor: crosshair;
+      touch-action: none;
+    }
+    .sig-baseline {
+      position: absolute;
+      bottom: 32px; left: 24px; right: 24px;
+      height: 1px;
+      background: var(--rule-strong);
+      pointer-events: none;
+    }
+    .sig-hint {
+      position: absolute;
+      bottom: 8px; left: 24px;
+      font-size: 11px;
+      color: var(--ink-muted);
+      pointer-events: none;
+      font-style: italic;
+    }
+    .sig-pad-wrap.has-content .sig-hint,
+    .sig-pad-wrap.has-content .sig-baseline { display: none; }
+
+    /* Acknowledgement */
+    .ack {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 16px 20px;
+      background: var(--paper);
+      border-radius: 8px;
+      border: 1px solid var(--rule);
+      margin-bottom: 28px;
+    }
+    .ack input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      accent-color: var(--gl-primary);
+      cursor: pointer;
+    }
+    .ack label {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      cursor: pointer;
+    }
+
+    /* Submit */
+    .submit-row {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.06s ease, box-shadow 0.15s ease, background 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background: var(--gl-primary);
+      color: var(--surface);
+      box-shadow: 0 1px 2px rgba(75, 0, 130, 0.3), 0 4px 12px rgba(75, 0, 130, 0.2);
+    }
+    .btn-primary:hover:not(:disabled) {
+      background: var(--gl-primary-dark);
+      box-shadow: 0 1px 2px rgba(56, 0, 95, 0.4), 0 6px 16px rgba(56, 0, 95, 0.3);
+    }
+    .btn-primary:active:not(:disabled) { transform: translateY(1px); }
+    .btn-primary:disabled {
+      background: var(--rule-strong);
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--gl-primary);
+      border: 1px solid var(--gl-primary);
+      box-shadow: none;
+    }
+    .btn-secondary:hover:not(:disabled) {
+      background: rgba(75, 0, 130, 0.06);
+    }
+    .btn-secondary:active:not(:disabled) { transform: translateY(1px); }
+    .btn-spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: var(--surface);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+    .btn.loading .btn-spinner { display: block; }
+    .btn.loading .btn-label { opacity: 0.85; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .privacy-note {
+      font-size: 12px;
+      color: var(--ink-muted);
+      max-width: 48ch;
+    }
+
+    /* ---------- Success state ---------- */
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 32px 16px;
+    }
+    .success-state.visible { display: block; }
+    .success-icon {
+      width: 72px; height: 72px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: var(--success-tint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .success-icon svg { width: 36px; height: 36px; color: var(--success); }
+    .success-state h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 32px;
+      letter-spacing: -0.015em;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+    .success-state p {
+      font-size: 15px;
+      color: var(--ink-muted);
+      margin-bottom: 24px;
+      max-width: 52ch;
+      margin-left: auto; margin-right: auto;
+    }
+    .success-meta {
+      display: inline-flex;
+      gap: 24px;
+      padding: 16px 24px;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .success-meta strong {
+      color: var(--ink);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Error toast */
+    .error-toast {
+      display: none;
+      padding: 12px 16px;
+      background: #F8E3E0;
+      border: 1px solid #E0A99F;
+      border-radius: 8px;
+      color: #C0392B;
+      font-size: 14px;
+      margin-top: 16px;
+    }
+    .error-toast.visible { display: block; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      max-width: 920px;
+      margin: 64px auto 48px;
+      padding: 0 32px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+    footer .divider {
+      width: 32px;
+      height: 1px;
+      background: var(--rule-strong);
+      margin: 0 auto 24px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 720px) {
+      .cover, section.clause, .signature-section { padding: 32px 24px; }
+      .cover-title { font-size: 34px; }
+      .cover-parties { grid-template-columns: 1fr; gap: 20px; text-align: left; }
+      .between { display: none; }
+      .form-grid { grid-template-columns: 1fr; }
+      .doc { padding: 32px 16px 80px; }
+      .brand-strip { padding: 16px 20px; }
+      .rate-callout { grid-template-columns: 1fr; text-align: left; gap: 12px; }
+      .rate-callout .badge { display: none; }
+      .rate-callout .price { text-align: left; }
+    }
+
+    /* Print: hide brand strip and signature interactivity, expand layout */
+    @media print {
+      .brand-strip, .signature-section { display: none; }
+      body { background: white; }
+      .cover, section.clause { box-shadow: none; border: none; padding: 16px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top brand strip -->
+  <header class="brand-strip">
+    <div class="brand-strip-inner">
+      <div class="brand-mark">
+        <img src="assets/DG - LOGO AND TEXT - BLACK - NO BG.png" alt="Digital Craft" class="brand-logo brand-logo-dc" id="logo-dc">
+        <span class="brand-x">×</span>
+        <img src="assets/gamlearn-logo.png" alt="GamLEARN" class="brand-logo brand-logo-gl" id="logo-gl">
+      </div>
+    </div>
+  </header>
+
+  <main class="doc">
+
+    <!-- Cover block -->
+    <article class="cover">
+      <div class="cover-eyebrow">Service &amp; Subscription Agreement</div>
+      <h1 class="cover-title">Keeping <em>GamLEARN</em> running—<br>website &amp; CRM, hosted and cared for.</h1>
+      <p class="cover-subtitle">
+        This agreement sets out the terms of an ongoing subscription under which Digital Craft hosts, supports and continuously improves the GamLEARN website and CRM, keeping both live and working for the charity month to month.
+      </p>
+
+      <div class="cover-parties">
+        <div class="party">
+          <h3>Provider</h3>
+          <div class="name">Digital Craft</div>
+          <div class="meta">
+            thedigicraft.co.uk
+          </div>
+        </div>
+        <div class="between">and</div>
+        <div class="party">
+          <h3>Client</h3>
+          <div class="name">GamLEARN</div>
+          <div class="meta">
+            Lived Experience &amp; Recovery Network<br>
+            Registered charity no. 1195032<br>
+            63/66 Hatton Gardens, Fifth Floor,<br>
+            Suite 23, London EC1N 8LE
+          </div>
+        </div>
+      </div>
+
+      <div class="meta-row">
+        <div>
+          <span class="meta-label">Issued</span>
+          <span class="meta-value" id="issue-date">—</span>
+        </div>
+        <div>
+          <span class="meta-label">Minimum term</span>
+          <span class="meta-value">12 months · then monthly</span>
+        </div>
+        <div>
+          <span class="meta-label">Subscription</span>
+          <span class="meta-value">£249.00 / month GBP</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 1. The Service -->
+    <section class="clause">
+      <h2><span class="num">01</span> The Service</h2>
+      <p class="lede">An ongoing subscription that keeps the GamLEARN website and CRM live, hosted, supported and continuously improved.</p>
+
+      <p>Digital Craft provides GamLEARN with a managed subscription service covering the two systems Digital Craft has built for the charity: the GamLEARN website and the GamLEARN CRM. The subscription keeps both systems hosted, secure, available and maintained, and includes ongoing support, bug fixes and minor improvements as set out in clause 03.</p>
+
+      <p>The subscription covers:</p>
+      <ul>
+        <li><strong>Website</strong> — hosting, uptime and ongoing upkeep of the GamLEARN website (gamlearn.org.uk), including content updates and minor changes.</li>
+        <li><strong>CRM</strong> — hosting, maintenance and support of the GamLEARN CRM, including the case management, membership, referral and supporting tools built for the charity.</li>
+        <li><strong>Support &amp; bug fixes</strong> — a channel to report issues, and the fixing of any defects so both systems keep working as intended.</li>
+        <li><strong>Infrastructure</strong> — the hosting, database, authentication, email delivery and supporting services required to run both systems day to day.</li>
+      </ul>
+
+      <p>The core CRM build is complete as at the date of this agreement, with the final changes delivered. From here, the subscription keeps the CRM and website running, cared for and evolving, rather than being a one-off build handed over and left.</p>
+    </section>
+
+    <!-- 2. Subscription Fee & Term -->
+    <section class="clause">
+      <h2><span class="num">02</span> Subscription Fee &amp; Minimum Term</h2>
+      <p class="lede">£249 per month, with a minimum term of 12 months from the date this agreement is signed.</p>
+
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Basis</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Subscription — website &amp; CRM<span class="due">Hosting, support, bug fixes &amp; minor tweaks</span></td>
+            <td>Per month</td>
+            <td>£249.00</td>
+          </tr>
+          <tr>
+            <td>Minimum term<span class="due">From the date of signature</span></td>
+            <td>Commitment</td>
+            <td>12 months</td>
+          </tr>
+          <tr class="total">
+            <td>Payable monthly <span class="pill pill-green">IN ADVANCE</span></td>
+            <td></td>
+            <td>£249.00 / mo</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Payment terms</h3>
+      <p>The subscription fee of £249 per month is billed monthly in advance, with the first payment due on signing this agreement and each subsequent payment on the same date each month thereafter.</p>
+      <p>GamLEARN commits to a minimum term of 12 months from the date of signature. The subscription cannot be cancelled during this minimum term; the monthly fee remains payable for the full 12 months. After the minimum term, the subscription continues on a rolling monthly basis as set out in clause 07.</p>
+    </section>
+
+    <!-- 3. Support, Bug Fixes & Additional Work -->
+    <section class="clause">
+      <h2><span class="num">03</span> Support, Bug Fixes &amp; Additional Work</h2>
+      <p class="lede">Bugs and minor tweaks are included. Anything larger is charged at an hourly rate or a fixed price agreed in writing first.</p>
+
+      <p>The monthly subscription is designed to keep GamLEARN's website and CRM running smoothly and improving over time. How work is treated depends on its size:</p>
+
+      <div class="rate-callout">
+        <div class="badge">✓</div>
+        <div>
+          <div class="title">Bugs &amp; minor tweaks — included</div>
+          <div class="desc">Fixing defects, small copy and content changes, and minor adjustments to either system.</div>
+        </div>
+        <div class="price">Included<small>in the subscription</small></div>
+      </div>
+
+      <div class="rate-callout">
+        <div class="badge">£</div>
+        <div>
+          <div class="title">Small ad-hoc changes</div>
+          <div class="desc">Work that goes beyond a minor tweak but doesn't warrant a full quote, agreed before it starts.</div>
+        </div>
+        <div class="price">£50<small>per hour</small></div>
+      </div>
+
+      <div class="rate-callout">
+        <div class="badge">＋</div>
+        <div>
+          <div class="title">Larger features &amp; new work</div>
+          <div class="desc">Significant new features, new website pages, or substantial CRM additions.</div>
+        </div>
+        <div class="price">Fixed quote<small>agreed in writing</small></div>
+      </div>
+
+      <p>For larger pieces of work, Digital Craft will provide a fixed-price quote in writing before any work begins, and no such work will start until GamLEARN has accepted the quote in writing (email confirmation is fine). Bug fixes and minor tweaks remain included at no additional cost and are never charged as extra.</p>
+    </section>
+
+    <!-- 4. Ownership & Licence -->
+    <section class="clause">
+      <h2><span class="num">04</span> Ownership &amp; Licence</h2>
+      <p class="lede">The website and CRM remain the property of Digital Craft. GamLEARN is licensed to use them for as long as the subscription is active.</p>
+
+      <p>The GamLEARN website and CRM — including all custom code, designs, database structure and system assets built by Digital Craft — remain the property of Digital Craft. This agreement is a subscription to use and benefit from these systems as a managed, hosted service; it is not a purchase or transfer of the systems themselves.</p>
+
+      <p>For as long as the subscription is active and up to date, GamLEARN has a full licence to use both the website and the CRM in the running of the charity, including all of its day-to-day work within them.</p>
+
+      <p>GamLEARN's own data — member records, case information, referrals, content and anything else the charity enters into the systems — belongs to GamLEARN. Digital Craft will provide an export of GamLEARN's data to the charity on reasonable request, and in any event on cancellation.</p>
+
+      <p>Should GamLEARN ever wish to take full ownership of the website and/or CRM and have them transferred into its own environment to run independently, this can be arranged as a separate, one-off purchase. The cost of such a transfer would be quoted at the time, based on the scale of the systems built and delivered up to that point, and is not included in the monthly subscription.</p>
+    </section>
+
+    <!-- 5. Hosting, Data & Third-Party Services -->
+    <section class="clause">
+      <h2><span class="num">05</span> Hosting, Infrastructure &amp; Third-Party Services</h2>
+      <p class="lede">Digital Craft provides and manages all the infrastructure needed to run both systems as part of the subscription.</p>
+
+      <p>Digital Craft provides and maintains the hosting, database, authentication, email delivery and supporting third-party services required to operate the GamLEARN website and CRM, at no additional cost beyond the monthly subscription.</p>
+
+      <p>Where a piece of work makes heavy use of a usage-based third-party service — for example, high volumes of text-message notifications — any such usage costs will be identified, discussed and agreed with GamLEARN before they are incurred. Standard, everyday running of the systems is covered by the subscription.</p>
+
+      <p>Where an underlying provider requires GamLEARN to hold an account in its own name, Digital Craft will configure and integrate that account on the charity's behalf but is not the account holder. Any such accounts will be identified to GamLEARN at the point they are needed.</p>
+    </section>
+
+    <!-- 6. Confidentiality & Data Protection -->
+    <section class="clause">
+      <h2><span class="num">06</span> Confidentiality &amp; Data Protection</h2>
+      <p class="lede">GamLEARN handles sensitive personal information; both parties protect it and comply with UK data protection law.</p>
+
+      <p>Both parties agree to keep confidential any non-public information shared in the course of this engagement, including source code, system designs, business information and — in particular — the personal data GamLEARN holds about the people it supports. This obligation survives termination of this agreement.</p>
+
+      <p>In relation to personal data held within the CRM, GamLEARN is the data controller and Digital Craft acts as data processor on GamLEARN's behalf. Digital Craft will process that personal data only as needed to provide and support the service, will keep it secure using appropriate technical and organisational measures, and will handle it in accordance with the UK GDPR and the Data Protection Act 2018.</p>
+
+      <p>Given the nature of GamLEARN's work supporting people affected by gambling-related harm and the criminal justice system, both parties recognise that much of this data is sensitive, and will treat it with corresponding care.</p>
+    </section>
+
+    <!-- 7. Term, Cancellation & Governing Law -->
+    <section class="clause">
+      <h2><span class="num">07</span> Term, Cancellation &amp; Governing Law</h2>
+      <p class="lede">A 12-month minimum term, then rolling monthly with 30 days notice. Governed by the laws of England and Wales.</p>
+
+      <p>This agreement begins on the date of signature and runs for a minimum term of 12 months. During the minimum term the subscription cannot be cancelled and the monthly fee remains payable in full.</p>
+
+      <p>After the minimum term, the subscription continues automatically on a rolling monthly basis until cancelled by either party giving 30 days written notice (email is acceptable). The subscription fee remains payable up to the end of the notice period.</p>
+
+      <p>On cancellation, the hosted service ends and GamLEARN's access to the hosted website and CRM ends with it. Digital Craft will provide GamLEARN with an export of its data. The website and CRM themselves remain the property of Digital Craft as set out in clause 04; taking ownership of the systems is available only as a separate purchase, quoted at the time. Non-payment of the subscription may result in suspension of the service after reasonable notice.</p>
+
+      <p>This agreement is governed by the laws of England and Wales, and the parties submit to the exclusive jurisdiction of the courts of England and Wales for any dispute arising from it.</p>
+    </section>
+
+    <!-- 8. Signature Section -->
+    <section class="signature-section" id="signature">
+
+      <!-- ACTIVE FORM -->
+      <div id="form-state">
+        <div class="signature-eyebrow">Acceptance &amp; Signature</div>
+        <h2 class="signature-title">Sign to start the subscription.</h2>
+        <p class="signature-intro">By signing below, GamLEARN confirms that it has read and understood the terms of this agreement and accepts them as a binding contract between Digital Craft and GamLEARN.</p>
+
+        <form id="contract-form" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="signer-name">Full name</label>
+              <input type="text" id="signer-name" name="signer-name" required autocomplete="name" placeholder="Name of signatory" />
+            </div>
+            <div class="form-field">
+              <label for="signer-company">Organisation</label>
+              <input type="text" id="signer-company" name="signer-company" required autocomplete="organization" value="GamLEARN" />
+            </div>
+            <div class="form-field">
+              <label for="signer-role">Role / Position</label>
+              <input type="text" id="signer-role" name="signer-role" autocomplete="organization-title" placeholder="e.g. Director, Trustee" />
+            </div>
+            <div class="form-field">
+              <label for="signer-email">Email address</label>
+              <input type="email" id="signer-email" name="signer-email" required autocomplete="email" placeholder="you@gamlearn.org.uk" />
+            </div>
+            <div class="form-field full">
+              <label for="signer-address">Address</label>
+              <input type="text" id="signer-address" name="signer-address" required value="63/66 Hatton Gardens, Fifth Floor, Suite 23, London EC1N 8LE" />
+            </div>
+          </div>
+
+          <div class="sig-wrapper">
+            <div class="sig-label">
+              <span>Signature</span>
+              <button type="button" class="sig-clear" id="sig-clear">Clear</button>
+            </div>
+            <div class="sig-pad-wrap" id="sig-pad-wrap">
+              <canvas id="sigpad"></canvas>
+              <div class="sig-baseline"></div>
+              <div class="sig-hint">Sign with your mouse, finger or stylus</div>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-field full">
+              <label for="signer-date">Date of signature</label>
+              <input type="text" id="signer-date" name="signer-date" readonly />
+            </div>
+          </div>
+
+          <label class="ack" for="ack-checkbox">
+            <input type="checkbox" id="ack-checkbox" required />
+            <label for="ack-checkbox">I confirm I have authority to enter into this agreement on behalf of GamLEARN, and I accept the terms set out above — including the 12-month minimum term and that the website and CRM remain the property of Digital Craft — as a binding contract under the laws of England and Wales.</label>
+          </label>
+
+          <div class="submit-row">
+            <button type="button" class="btn btn-secondary" id="preview-btn">
+              <span class="btn-label">Preview PDF</span>
+            </button>
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              <span class="btn-spinner"></span>
+              <span class="btn-label">Sign &amp; start subscription</span>
+            </button>
+            <span class="privacy-note">A signed PDF copy will be emailed to you and to Digital Craft for record.</span>
+          </div>
+
+          <div class="error-toast" id="error-toast"></div>
+        </form>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div class="success-state" id="success-state">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h2>Agreement signed.</h2>
+        <p>Your signed PDF has been emailed to you and to Digital Craft. A copy is also available to download below for your records.</p>
+        <div class="success-meta">
+          <div>Signed by <strong id="success-name">—</strong></div>
+          <div>Timestamp <strong id="success-timestamp">—</strong></div>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary" id="download-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download signed PDF
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="divider"></div>
+    Digital Craft · thedigicraft.co.uk · This document is electronically signed under the Electronic Communications Act 2000.<br>
+    Generated <span id="footer-date">—</span>
+  </footer>
+
+  <!-- jsPDF for client-side download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script>
+    // ---- Date setup ----
+    function formatDate(d) {
+      return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+    function setDates() {
+      const today = formatDate(new Date());
+      document.getElementById('issue-date').textContent = today;
+      document.getElementById('signer-date').value = today;
+      document.getElementById('footer-date').textContent = today;
+    }
+    setDates();
+
+    // ---- Signature pad ----
+    const canvas = document.getElementById('sigpad');
+    const wrap = document.getElementById('sig-pad-wrap');
+    const ctx = canvas.getContext('2d');
+    let drawing = false;
+    let hasContent = false;
+
+    function resizeCanvas() {
+      const ratio = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * ratio;
+      canvas.height = rect.height * ratio;
+      ctx.scale(ratio, ratio);
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.strokeStyle = '#1A1A1A';
+      ctx.lineWidth = 2;
+    }
+    window.addEventListener('resize', () => {
+      const data = hasContent ? canvas.toDataURL() : null;
+      resizeCanvas();
+      if (data) {
+        const img = new Image();
+        img.onload = () => ctx.drawImage(img, 0, 0, canvas.width / (window.devicePixelRatio || 1), canvas.height / (window.devicePixelRatio || 1));
+        img.src = data;
+      }
+    });
+    resizeCanvas();
+
+    function pos(e) {
+      const rect = canvas.getBoundingClientRect();
+      if (e.touches) {
+        return { x: e.touches[0].clientX - rect.left, y: e.touches[0].clientY - rect.top };
+      }
+      return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    }
+    function start(e) {
+      e.preventDefault();
+      drawing = true;
+      hasContent = true;
+      wrap.classList.add('active', 'has-content');
+      const p = pos(e);
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+    }
+    function move(e) {
+      if (!drawing) return;
+      e.preventDefault();
+      const p = pos(e);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+    }
+    function end(e) {
+      drawing = false;
+    }
+    canvas.addEventListener('mousedown', start);
+    canvas.addEventListener('mousemove', move);
+    canvas.addEventListener('mouseup', end);
+    canvas.addEventListener('mouseleave', end);
+    canvas.addEventListener('touchstart', start, { passive: false });
+    canvas.addEventListener('touchmove', move, { passive: false });
+    canvas.addEventListener('touchend', end);
+
+    document.getElementById('sig-clear').addEventListener('click', () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      hasContent = false;
+      wrap.classList.remove('active', 'has-content');
+    });
+
+    // ---- Form submission ----
+    const form = document.getElementById('contract-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const errorToast = document.getElementById('error-toast');
+    let signedPdfBlob = null;
+    let signedPdfFilename = null;
+
+    function showError(msg) {
+      errorToast.textContent = msg;
+      errorToast.classList.add('visible');
+      setTimeout(() => errorToast.classList.remove('visible'), 6000);
+    }
+
+    function validateForm(data) {
+      const requiredFields = ['signer-name', 'signer-company', 'signer-email', 'signer-address'];
+      let valid = true;
+      requiredFields.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el.value.trim()) {
+          el.classList.add('invalid');
+          valid = false;
+        } else {
+          el.classList.remove('invalid');
+        }
+      });
+      const email = data['signer-email'] || '';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById('signer-email').classList.add('invalid');
+        valid = false;
+      }
+      if (!hasContent) {
+        wrap.classList.add('active');
+        wrap.style.borderColor = '#C0392B';
+        valid = false;
+      }
+      const ack = document.getElementById('ack-checkbox');
+      if (!ack.checked) valid = false;
+      return valid;
+    }
+
+    function buildPdf(data, signatureDataUrl) {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+      const pageW = doc.internal.pageSize.getWidth();
+      const pageH = doc.internal.pageSize.getHeight();
+      const margin = 56;
+      let y = margin;
+
+      // Header bar
+      doc.setFillColor(75, 0, 130);
+      doc.rect(0, 0, pageW, 6, 'F');
+
+      const dcLogo = document.getElementById('logo-dc');
+      const glLogo = document.getElementById('logo-gl');
+      const logoTop = y + 4;
+      try {
+        const dcH = 24;
+        const dcW = dcLogo.naturalWidth && dcLogo.naturalHeight
+          ? (dcLogo.naturalWidth / dcLogo.naturalHeight) * dcH
+          : 110;
+        doc.addImage(dcLogo, 'PNG', margin, logoTop, dcW, dcH);
+      } catch (e) {
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(10);
+        doc.setTextColor(90, 100, 120);
+        doc.text('DIGITAL CRAFT', margin, y + 16);
+      }
+      try {
+        const glH = 26;
+        const glW = glLogo.naturalWidth && glLogo.naturalHeight
+          ? (glLogo.naturalWidth / glLogo.naturalHeight) * glH
+          : 90;
+        doc.addImage(glLogo, 'PNG', pageW - margin - glW, logoTop - 2, glW, glH);
+      } catch (e) { /* logo optional in PDF */ }
+      y += 56;
+
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10);
+      doc.setTextColor(75, 0, 130);
+      doc.text('SERVICE & SUBSCRIPTION AGREEMENT', margin, y);
+      y += 26;
+
+      doc.setFont('times', 'normal');
+      doc.setFontSize(24);
+      doc.setTextColor(26, 26, 26);
+      doc.text('Keeping GamLEARN running — website & CRM, hosted and cared for.', margin, y, { maxWidth: pageW - margin * 2 });
+      y += 52;
+
+      // Parties block
+      doc.setFontSize(10);
+      doc.setTextColor(90, 100, 120);
+      doc.setFont('helvetica', 'bold');
+      doc.text('PROVIDER', margin, y);
+      doc.text('CLIENT', pageW / 2, y);
+      y += 14;
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(26, 26, 26);
+      doc.setFontSize(13);
+      doc.text('Digital Craft', margin, y);
+      doc.text(data['signer-company'] || 'GamLEARN', pageW / 2, y);
+      y += 14;
+      doc.setFontSize(10);
+      doc.setTextColor(90, 100, 120);
+      doc.text('thedigicraft.co.uk', margin, y);
+      doc.text('Registered charity no. 1195032', pageW / 2, y);
+      y += 32;
+
+      doc.setDrawColor(229, 232, 238);
+      doc.line(margin, y, pageW - margin, y);
+      y += 24;
+
+      // Body content — clause-by-clause
+      function clauseHeading(title) {
+        if (y > pageH - 160) { doc.addPage(); y = margin; }
+        const m = title.match(/^(\d{2})\s*·\s*(.+)$/);
+        if (m) {
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(9);
+          doc.setTextColor(75, 0, 130);
+          doc.text(m[1], margin, y);
+          doc.setFont('times', 'bold');
+          doc.setFontSize(16);
+          doc.setTextColor(26, 26, 26);
+          doc.text(m[2], margin + 26, y);
+        } else {
+          doc.setFont('times', 'bold');
+          doc.setFontSize(16);
+          doc.setTextColor(26, 26, 26);
+          doc.text(title, margin, y);
+        }
+        y += 20;
+      }
+      function clauseBody(text) {
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10.5);
+        doc.setTextColor(43, 53, 72);
+        const lines = doc.splitTextToSize(text, pageW - margin * 2);
+        for (const line of lines) {
+          if (y > pageH - 100) { doc.addPage(); y = margin; }
+          doc.text(line, margin, y);
+          y += 16;
+        }
+        y += 18;
+      }
+
+      clauseHeading('01 · The Service');
+      clauseBody('Digital Craft provides GamLEARN with a managed subscription service covering the GamLEARN website (gamlearn.org.uk) and the GamLEARN CRM. The subscription keeps both systems hosted, secure, available and maintained, and includes ongoing support, bug fixes and minor improvements. It covers: the website (hosting, uptime, content updates and minor changes); the CRM (hosting, maintenance and support of the case management, membership, referral and supporting tools); support and bug fixes; and the underlying infrastructure (hosting, database, authentication and email delivery). The core CRM build is complete as at the date of this agreement, with the final changes delivered; from here the subscription keeps both systems running, cared for and evolving.');
+
+      clauseHeading('02 · Subscription Fee & Minimum Term');
+      clauseBody('Subscription fee: £249 per month (GBP), billed monthly in advance. The first payment is due on signing, and each subsequent payment on the same date each month. GamLEARN commits to a minimum term of 12 months from the date of signature. The subscription cannot be cancelled during the minimum term and the monthly fee remains payable for the full 12 months. After the minimum term, the subscription continues on a rolling monthly basis (see clause 07).');
+
+      clauseHeading('03 · Support, Bug Fixes & Additional Work');
+      clauseBody('Bugs and minor tweaks — fixing defects and small content or content changes to either system — are included in the subscription at no additional cost, and are never charged as extra. Small ad-hoc changes that go beyond a minor tweak but do not warrant a full quote are charged at £50 per hour, agreed before work starts. Larger pieces of work — significant new features, new website pages, or substantial CRM additions — are quoted as a fixed price in writing, and no such work begins until GamLEARN has accepted the quote in writing (email confirmation is acceptable).');
+
+      clauseHeading('04 · Ownership & Licence');
+      clauseBody('The GamLEARN website and CRM — including all custom code, designs, database structure and system assets built by Digital Craft — remain the property of Digital Craft. This agreement is a subscription to use and benefit from these systems as a managed, hosted service; it is not a purchase or transfer of the systems themselves. For as long as the subscription is active and up to date, GamLEARN has a full licence to use both systems in running the charity. GamLEARN\'s own data (member records, case information, referrals and content it enters) belongs to GamLEARN and will be exported to it on reasonable request and on cancellation. Should GamLEARN wish to take full ownership of the website and/or CRM and have them transferred into its own environment, this can be arranged as a separate, one-off purchase, quoted at the time based on the scale of the systems built to that point, and is not included in the monthly subscription.');
+
+      clauseHeading('05 · Hosting, Infrastructure & Third-Party Services');
+      clauseBody('Digital Craft provides and maintains the hosting, database, authentication, email delivery and supporting third-party services required to operate both systems, at no additional cost beyond the monthly subscription. Where a piece of work makes heavy use of a usage-based third-party service (for example, high volumes of text-message notifications), any such usage costs will be identified, discussed and agreed with GamLEARN before they are incurred. Where an underlying provider requires GamLEARN to hold an account in its own name, Digital Craft will configure and integrate that account on the charity\'s behalf but is not the account holder.');
+
+      clauseHeading('06 · Confidentiality & Data Protection');
+      clauseBody('Both parties keep confidential any non-public information shared in the engagement, including source code, system designs and the personal data GamLEARN holds about the people it supports; this obligation survives termination. For personal data in the CRM, GamLEARN is the data controller and Digital Craft acts as data processor on its behalf, processing that data only to provide and support the service, keeping it secure with appropriate measures, and handling it in accordance with the UK GDPR and the Data Protection Act 2018. Given the sensitive nature of GamLEARN\'s work, both parties will treat this data with corresponding care.');
+
+      clauseHeading('07 · Term, Cancellation & Governing Law');
+      clauseBody('This agreement begins on the date of signature and runs for a minimum term of 12 months, during which it cannot be cancelled and the fee remains payable in full. After the minimum term it continues on a rolling monthly basis until cancelled by either party on 30 days written notice (email acceptable), with the fee payable to the end of the notice period. On cancellation the hosted service and GamLEARN\'s access to it end; Digital Craft provides an export of GamLEARN\'s data. The systems themselves remain the property of Digital Craft (clause 04); taking ownership is available only as a separate purchase, quoted at the time. Non-payment may result in suspension of the service after reasonable notice. Governed by the laws of England and Wales, exclusive jurisdiction of the courts of England and Wales.');
+
+      // ---- Signature page ----
+      if (y > pageH - 280) { doc.addPage(); y = margin; }
+      else y += 20;
+
+      doc.setDrawColor(229, 232, 238);
+      doc.line(margin, y, pageW - margin, y);
+      y += 32;
+
+      doc.setFont('times', 'bold');
+      doc.setFontSize(18);
+      doc.setTextColor(26, 26, 26);
+      doc.text('Acceptance & Signature', margin, y);
+      y += 28;
+
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10);
+      doc.setTextColor(43, 53, 72);
+      const intro = 'Signed on behalf of GamLEARN as confirmation that the above terms — including the 12-month minimum term and that the website and CRM remain the property of Digital Craft — are accepted as a binding agreement under the laws of England and Wales.';
+      const introLines = doc.splitTextToSize(intro, pageW - margin * 2);
+      doc.text(introLines, margin, y);
+      y += introLines.length * 13 + 16;
+
+      // Field grid
+      const col1 = margin;
+      const col2 = pageW / 2 + 8;
+      function field(label, value, x, yPos) {
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(8);
+        doc.setTextColor(90, 100, 120);
+        doc.text(label.toUpperCase(), x, yPos);
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(11);
+        doc.setTextColor(26, 26, 26);
+        doc.text(value || '—', x, yPos + 14);
+      }
+      field('Signed by', data['signer-name'], col1, y);
+      field('Organisation', data['signer-company'], col2, y);
+      y += 38;
+      field('Role', data['signer-role'] || '—', col1, y);
+      field('Email', data['signer-email'], col2, y);
+      y += 38;
+      field('Date', data['signer-date'], col1, y);
+      field('Address', data['signer-address'], col2, y);
+      y += 38;
+
+      // Signature image
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(8);
+      doc.setTextColor(90, 100, 120);
+      doc.text('SIGNATURE', col1, y);
+      y += 10;
+      try {
+        doc.addImage(signatureDataUrl, 'PNG', col1, y, 220, 80);
+      } catch (e) {
+        doc.text('[signature]', col1, y + 30);
+      }
+      y += 88;
+      doc.setDrawColor(26, 26, 26);
+      doc.line(col1, y, col1 + 220, y);
+      y += 12;
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(9);
+      doc.setTextColor(26, 26, 26);
+      doc.text(data['signer-name'] || '', col1, y);
+
+      // Footer on every page
+      const pageCount = doc.getNumberOfPages();
+      for (let i = 1; i <= pageCount; i++) {
+        doc.setPage(i);
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(8);
+        doc.setTextColor(150, 160, 180);
+        doc.text(`Digital Craft × GamLEARN · Page ${i} of ${pageCount}`, pageW / 2, pageH - 24, { align: 'center' });
+      }
+
+      return doc;
+    }
+
+    document.getElementById('preview-btn').addEventListener('click', () => {
+      setDates();
+      const fd = new FormData(form);
+      const data = Object.fromEntries(fd.entries());
+      if (!validateForm(data)) {
+        showError('Fill in the form, sign and tick the acknowledgement to preview the PDF.');
+        return;
+      }
+      const signatureDataUrl = canvas.toDataURL('image/png');
+      const pdfDoc = buildPdf(data, signatureDataUrl);
+      const url = URL.createObjectURL(pdfDoc.output('blob'));
+      window.open(url, '_blank');
+      setTimeout(() => URL.revokeObjectURL(url), 60_000);
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      setDates();
+      const fd = new FormData(form);
+      const data = Object.fromEntries(fd.entries());
+
+      if (!validateForm(data)) {
+        showError('Please complete all required fields, sign and tick the acknowledgement.');
+        return;
+      }
+
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+
+      try {
+        const signatureDataUrl = canvas.toDataURL('image/png');
+        const pdfDoc = buildPdf(data, signatureDataUrl);
+        const filename = `GamLEARN_Subscription_signed_${data['signer-name'].replace(/\s+/g, '_')}.pdf`;
+        const pdfBlob = pdfDoc.output('blob');
+        const pdfBase64 = pdfDoc.output('datauristring').split(',')[1];
+
+        signedPdfBlob = pdfBlob;
+        signedPdfFilename = filename;
+
+        // POST to backend
+        const res = await fetch('/api/sign', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            ...data,
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent,
+            pdfFilename: filename,
+            pdfBase64: pdfBase64
+          })
+        });
+
+        if (!res.ok) {
+          const errText = await res.text().catch(() => 'Unknown server error');
+          throw new Error(errText || `Server returned ${res.status}`);
+        }
+
+        // Show success state
+        document.getElementById('form-state').style.display = 'none';
+        const success = document.getElementById('success-state');
+        success.classList.add('visible');
+        document.getElementById('success-name').textContent = data['signer-name'];
+        document.getElementById('success-timestamp').textContent = new Date().toLocaleString('en-GB');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (err) {
+        console.error(err);
+        showError(`Could not submit: ${err.message}. Your signature has not been recorded — please try again.`);
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+      }
+    });
+
+    document.getElementById('download-btn').addEventListener('click', () => {
+      if (!signedPdfBlob) return;
+      const url = URL.createObjectURL(signedPdfBlob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = signedPdfFilename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  </script>
+
+</body>
+</html>

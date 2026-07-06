@@ -1,0 +1,17 @@
+{
+  "name": "dc-gamlearn-contract",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Digital Craft × GamLEARN — website & CRM service and subscription agreement signing page",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}
