@@ -78,7 +78,7 @@ export default async function handler(req, res) {
       lede: `Hi ${escapeHtml(signerName.split(' ')[0])}, thank you for signing the website &amp; CRM subscription agreement with Digital Craft. A copy is attached for your records.`,
       blockTitle: 'What happens next',
       blockHtml: `
-        <p style="margin:0 0 12px">Your subscription is now set up at £249 per month, covering hosting, support, bug fixes and minor tweaks for your website and CRM. We'll keep both systems running and looked after, and we're on hand whenever you need us.</p>
+        <p style="margin:0 0 12px">This just puts your existing £249 per month subscription in writing — covering hosting, support, bug fixes and minor tweaks for your website and CRM. Nothing changes on your side: we'll keep both systems running and looked after, and we're on hand whenever you need us.</p>
         <p style="margin:0">If anything in the attached document doesn't look right, just reply to this email and we'll get it sorted.</p>
       `,
       footnote: 'Digital Craft · thedigicraft.co.uk'
